@@ -30,10 +30,8 @@ public class Main {
 
         String[] b =  {"k ", "e", "w" , "q", "o", "b"} ;
 
-        for (int i = b.length ; i >= 0 ; i--) {
-            String k = null;
-            b[i] = k ;
-            out.println(k);
+        for (int i = b.length -1 ; i >= 0 ; i--) {
+          out.println(b[i] + " ") ;
         }
 
         }
