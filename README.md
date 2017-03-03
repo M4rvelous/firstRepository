@@ -1,4 +1,3 @@
 # firstRepository
 Test
-
-Testing how GitHubs function work.
+A repository where I store small simple exercises 
