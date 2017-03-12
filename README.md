@@ -1,3 +1,3 @@
 # firstRepository
-Test
-A repository where I store small simple exercises 
+
+A repository where I store small simple exercises and small applicatitions.
