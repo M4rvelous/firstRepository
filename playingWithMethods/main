@@ -1,0 +1,35 @@
+
+
+    package methodstest;
+
+    // just playing around with methods 
+
+    import static java.lang.System.out;
+
+
+    public class MethodsTest {
+
+        public static void main(String[] args) {
+
+            num test = new num();
+
+          out.println(  test.addition(10, 5) + " " +
+            test.subtraction(18,8) + " " +
+            test.division(10, 2) + " " +
+            test.multiplication(10, 5)  );
+
+          Surface test1 = new Surface();
+
+        out.println(  test1.circleSurface(15) + " " +
+          test1.squareSurface(22) + " " +
+          test1.trapezoidSurface(10, 20, 30) + " " +
+          test1.rectangleSurface(10, 20) + " " +
+          test1.rectangleSurface(15, 22) ) ;
+
+
+
+
+
+        }
+
+    }
