@@ -1,0 +1,29 @@
+
+package methodstest;
+
+
+public class Surface {
+ 
+   double  pi = 3.14; 
+    
+   public double circleSurface (int x) {
+       return (x^2)*pi;
+   }
+   
+   public double triangleSurface (int x , int y){
+       return (x*y)/2; 
+   }
+   
+   public int squareSurface(int x) {
+       return x^2;
+   }
+   
+   public int rectangleSurface(int x , int y ) {
+       return x*y ; 
+   }
+   
+    public double trapezoidSurface( int x , int y , int h) {
+        return ((x+y)*h)/2 ; 
+    }
+    
+}
