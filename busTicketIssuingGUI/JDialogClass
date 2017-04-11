@@ -251,6 +251,7 @@ public class NewJDialog extends javax.swing.JDialog {
     
     double x = 0 ;             //ticket price 
     String discount; 
+    String destination;
     boolean rTicket;         //boolean that checks if a return ticket has been issued
     boolean nameCheck;
     boolean destinationCheck; 
@@ -262,6 +263,7 @@ public class NewJDialog extends javax.swing.JDialog {
         x= 48.50;
         jTextArea1.setText("Athens Selcted");
         destinationCheck = true ; 
+        destination = "Athens";
     }                                        
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -269,6 +271,7 @@ public class NewJDialog extends javax.swing.JDialog {
         x = 25.60;
         jTextArea1.setText("Corfu Selcted");
         destinationCheck = true ; 
+        destination = "Corfu";
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -276,6 +279,7 @@ public class NewJDialog extends javax.swing.JDialog {
         x = 35.50 ; 
         jTextArea1.setText("Thessaloniki Selcted");
         destinationCheck = true ; 
+        destination = "Thessaloniki";
     }                                        
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -319,6 +323,7 @@ public class NewJDialog extends javax.swing.JDialog {
                  + "Passenger:" + jTextField1.getText() + "\n" 
                  + "Price:$" + x + "\n" 
                  + "Discount Rate:" + discount + "\n"
+                 + "Destination:" + destination + "\n"
                  + "Return:" + ticketReturn + "\n" 
                  + "Have a nice trip!" + "\n"
                  +  "-----------------" );
