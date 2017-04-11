@@ -99,6 +99,11 @@ public class NewJDialog extends javax.swing.JDialog {
         jLabel5.setText("Return Ticket");
 
         jButton7.setText("No");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("Issue Ticket");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -244,45 +249,83 @@ public class NewJDialog extends javax.swing.JDialog {
         pack();
     }// </editor-fold>                        
     
-    double x = 0 ; 
+    double x = 0 ;             //ticket price 
+    String discount; 
+    boolean rTicket;         //boolean that checks if a return ticket has been issued
+    boolean nameCheck;
+    boolean destinationCheck; 
+    boolean discountCheck; 
+    boolean returnCheck; 
+    
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         x= 48.50;
         jTextArea1.setText("Athens");
+        destinationCheck = true ; 
     }                                        
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         x = 25.60;
         jTextArea1.setText("Corfu");
+        destinationCheck = true ; 
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         x = 35.50 ; 
         jTextArea1.setText("Thessaloniki");
+        destinationCheck = true ; 
     }                                        
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         x = x - (x*0.1);
         jTextArea1.setText("10% discount");
+        discount = "10%";
+        discountCheck = true ; 
     }                                        
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         x = x - (x*0.25);
         jTextArea1.setText("25% discount");
+         discount = "25%";
+         discountCheck = true ; 
     }                                        
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         x = x - (x*0.5);
         jTextArea1.setText("50% discount");
+         discount = "50%";
+         discountCheck = true ; 
     }                                        
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        jTextArea1.setText("ticket Price:$" + x );
+        String ticketReturn; 
+        if (rTicket == true) {
+            ticketReturn = "Yes";
+        }
+        else {
+            ticketReturn = "No";
+        }
+        
+        if ((nameCheck == true) && (destinationCheck == true) && (discountCheck == true)
+                && (returnCheck == true)) {
+        
+     
+         jTextArea1.setText( "-----------------" + "\n" 
+                 + "Passenger:" + jTextField1.getText() + "\n" 
+                 + "Price:$" + x + "\n" 
+                 + "Discount Rate:" + discount + "\n"
+                 + "Return:" + ticketReturn + "\n" 
+                 + "Have a nice trip!" + "\n"
+                 +  "-----------------" );
+        }
+        else {
+            jTextArea1.setText("Invalid Data Entry.Please try again.");
+        }
        
     }                                        
 
@@ -290,22 +333,34 @@ public class NewJDialog extends javax.swing.JDialog {
         // TODO add your handling code here:
          x = x * 2 ; 
         jTextArea1.setText("Return ticket issued");
+        rTicket = true ;
+        returnCheck = true ; 
     }                                        
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
         jTextArea1.setText("No discount selected");
+         discount = "0%";
+         discountCheck = true ; 
     }                                         
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
        jTextArea1.getText();
+       nameCheck = true ; 
     }                                           
 
     private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {                                       
         // TODO add your handling code here:
         jTextArea1.getText();
-        
+         nameCheck = true ; 
     }                                      
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        jTextArea1.setText("No return ticket issued"); 
+        rTicket = false ; 
+        returnCheck = true ; 
+    }                                        
 
     /**
      * @param args the command line arguments
