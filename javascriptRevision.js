@@ -211,6 +211,40 @@ function mix(){
 
 mix();
 
+//moar surface functions 
+
+function rectangle(x , y) {
+    var res = x *y;
+    return res ;
+};
+
+function square(a) {
+    a = a * a ;
+    return a ;
+};
+
+function triangle(b,h){
+    var res = b * h ;
+    return res;
+};
+
+function trapezoid(a,b,h){
+    var res = ((a+b)/2)*h;
+    return res ;
+};
+
+function cube(a){
+   var res = 6(a*a);
+    return res;
+}
+
+function pyramid(l,w,h){
+    var res = l*w+l*(Math.sqrt(Math.pow(w/2 , 2))+Math.pow(w,2)) + w (Math.sqrt(Math.pow(l/2,2))+Math.pow(h,2));
+    return res;
+}
+
+
+
 
 
 
