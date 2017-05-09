@@ -243,6 +243,16 @@ function pyramid(l,w,h){
     return res;
 }
 
+function ipotinousa( a , b){
+	var x= Math.pow(a,2);
+	var y=	Math.pow(b,2);
+	var res = x + y;
+	var finalRes = Math.sqrt(res);
+	console.log(finalRes);
+};
+
+ipotinousa(15, 22);
+
 
 
 
