@@ -28,15 +28,15 @@ public class RestaurantReservation {
            newClient.names.add(y);
            
            out.println("Enter Reservation Time");
-           String a = addNewClient.nextLine();
+           double a = addNewClient.nextDouble();
            newClient.times.add(a);
            
            out.println("Enter table number");
-           String b = addNewClient.nextLine();
+           int b = addNewClient.nextInt();
            newClient.tableNums.add(b);
            
            out.println("Enter people");
-           String c = addNewClient.nextLine();
+           int c = addNewClient.nextInt();
            newClient.persons.add(c);
         
             out.println("Add new client?");
