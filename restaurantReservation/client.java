@@ -1,4 +1,4 @@
-// should add methods for sorting arraylists
+
 
 package restaurantreservation;
 
@@ -18,7 +18,7 @@ ArrayList<Integer> tables = new ArrayList();
 ArrayList<Integer> tableNums = new ArrayList();
 ArrayList<Integer> persons = new ArrayList();
 
-public void display() {
+ public void display() {
     out.println(fixedData[0]+ names);
     out.println(fixedData[1]+times);
     out.println(fixedData[2]+tableNums);
@@ -37,51 +37,63 @@ public void sumClients(){               //sums the clients for that evening
     sum = sum + persons.get(i);
 }
   out.println("Total Clients:"+sum);
-  persons.clear();                     // clears Arraylist, should remain there?
+ // persons.clear();                     // clears Arraylist, should remain there?
 }
 
-int[] tablesArray = { 0,0,0,0,0,0,0,0,0,0}; 
-int sum;
+int[] tablesArray = { 1,2,3,4,5,6,7,8,9,10}; 
+int sum = tableNums.size();
+int sum1= 0 , sum2= 0  , sum3 = 0 ,  sum4=0 , sum5=0 , sum6=0 , sum7=0 , sum8=0 , sum9=0,  sum10=0;
+
 public void sumOfTables(){                 //sums reserved tables and sorts how many times a table was reserved that night
-     sum = tableNums.size();
-    
-    for (int i=0; i < tableNums.size(); i++){
-    if (tableNums.equals(1)){
-        tablesArray[0] ++ ;
+    for (int i = 0; i< tableNums.size() ; i++){
+     if (tableNums.get(i).equals(1)){
+         sum1 ++ ; 
+     }  
+     else if (tableNums.get(i).equals(2)){
+         sum2 ++ ; 
     }
-    else if (tableNums.equals(2)) {
-        tablesArray[1] ++ ;
-    }
-    else if (tableNums.equals(3)) {
-        tablesArray[2] ++ ;
-    }
-      else if (tableNums.equals(4)) {
-        tablesArray[3] ++ ;
-    }
-    else if (tableNums.equals(5)) {
-        tablesArray[4] ++ ;
+     else if (tableNums.get(i).equals(3)){
+         sum3 ++ ; 
+     }
+     else if (tableNums.get(i).equals(4)){
+         sum4 ++ ; 
+     }
+     else if (tableNums.get(i).equals(5)){
+         sum5 ++ ; 
+     }
+      else if (tableNums.get(i).equals(6)){
+         sum6 ++ ; 
+     }
+      else if (tableNums.get(i).equals(7)){
+         sum7 ++ ; 
+     }
+      else if (tableNums.get(i).equals(8)){
+         sum8 ++ ; 
+     }
+      else if (tableNums.get(i).equals(9)){
+         sum9 ++ ; 
+     }
+      else if (tableNums.get(i).equals(10)){
+         sum10 ++ ; 
+     }
+      else {
+          
+      }
 }
-    else if (tableNums.equals(6)) {
-        tablesArray[5] ++ ;
-    }
-    else if (tableNums.equals(7)) {
-        tablesArray[6] ++ ;
-    }
-      else if (tableNums.equals(8)) {
-        tablesArray[7] ++ ;
-    }
-    else if (tableNums.equals(9)) {
-        tablesArray[8] ++ ;
-    }
-     else if (tableNums.equals(10)) {
-        tablesArray[9] ++ ;
 }
-            else{}}}
-
   public void tablePercentages(){                     // percentahges on table popularity for the night
-       for (int i=0; i < 10; i++) {
-      out.println("Table"+tablesArray[i]+":"+(tablesArray[i]*100)/sum + "%");
-  }
+     
+out.println("Table 1:"+(sum1*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum2*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum3*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum4*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum5*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum6*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum7*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum8*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum9*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum10*100)/tables.size() + "%" );
+               
   }
 
 }
