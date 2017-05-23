@@ -18,36 +18,47 @@ public class RestaurantReservation {
        Scanner addNewClient = new Scanner(System.in);
        out.println("Add new client?");
        String x = addNewClient.nextLine();
+       
        client newClient = new client();
+       totalClient newTotalClient = new totalClient();
         
-       if (x.equals("y") ){
-           do{
+       while (x.equals("y") ){
           
+           
            out.println("Enter name.");
-           String y = addNewClient.nextLine();
+           Scanner addNames = new Scanner(System.in);
+           String y = addNames.nextLine();
            newClient.names.add(y);
+           newTotalClient.totalNames.add(y);
            
            out.println("Enter Reservation Time");
            double a = addNewClient.nextDouble();
            newClient.times.add(a);
+           newTotalClient.totalTimes.add(a);
            
            out.println("Enter table number");
            int b = addNewClient.nextInt();
            newClient.tableNums.add(b);
+           newTotalClient.totalTableNums.add(b);
            
            out.println("Enter people");
            int c = addNewClient.nextInt();
            newClient.persons.add(c);
-        
-            out.println("Add new client?");
-            x = addNewClient.nextLine();
-           }while(x.equals("y"));
-       }
-       else {
+           newTotalClient.totalPersons.add(c);
            
+           Scanner checkClient = new Scanner(System.in);
+           out.println("Add new client?");
+           x = checkClient.nextLine();
+            
        }
+      
        
         newClient.display();
+        newClient.displayNames();
+        newClient.sumClients();
+        newClient.sumOfTables();
+        newClient.tablePercentages();
+                
      
     }
 
