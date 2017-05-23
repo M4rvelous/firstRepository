@@ -13,53 +13,44 @@ import java.util.Scanner;
  */
 public class RestaurantReservation {
 
-    public static void main(String[] args) {
-        
-       Scanner addNewClient = new Scanner(System.in);
-       out.println("Add new client?");
-       String x = addNewClient.nextLine();
-       
-       client newClient = new client();
-       totalClient newTotalClient = new totalClient();
-        
-       while (x.equals("y") ){
-          
-           
-           out.println("Enter name.");
-           Scanner addNames = new Scanner(System.in);
-           String y = addNames.nextLine();
-           newClient.names.add(y);
-           newTotalClient.totalNames.add(y);
-           
-           out.println("Enter Reservation Time");
-           double a = addNewClient.nextDouble();
-           newClient.times.add(a);
-           newTotalClient.totalTimes.add(a);
-           
-           out.println("Enter table number");
-           int b = addNewClient.nextInt();
-           newClient.tableNums.add(b);
-           newTotalClient.totalTableNums.add(b);
-           
-           out.println("Enter people");
-           int c = addNewClient.nextInt();
-           newClient.persons.add(c);
-           newTotalClient.totalPersons.add(c);
-           
-           Scanner checkClient = new Scanner(System.in);
-           out.println("Add new client?");
-           x = checkClient.nextLine();
-            
-       }
-      
-       
-        newClient.display();
-        newClient.displayNames();
-        newClient.sumClients();
-        newClient.sumOfTables();
-        newClient.tablePercentages();
-                
+public static void main(String[] args) {
      
-    }
+         /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Darcula".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(NewJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(NewJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(NewJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(NewJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the dialog */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                GUI dialog = new GUI(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
+            }
+        });
+    }   
 
 }
