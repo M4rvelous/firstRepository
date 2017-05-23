@@ -23,7 +23,7 @@ public void display() {
     out.println(fixedData[2]+ totalTableNums);
     out.println(fixedData[3]+totalPersons);
 }
-void displayTotalNames() {
+void displayAllNames() {
  for (int i= 0 ; i < totalNames.size(); i++){
     out.println(fixedData[0]+ totalNames.get(i));
     }   
@@ -35,45 +35,61 @@ void sumAllClients(){
 }
    out.println("Total Clients:"+sum); 
 }
-int[] tablesArray = { 0,0,0,0,0,0,0,0,0,0}; 
-int sum;
+
+int sum1= 0 , sum2= 0  , sum3 = 0 ,  sum4=0 , sum5=0 , sum6=0 , sum7=0 , sum8=0 , sum9=0,  sum10=0;
+
 void sumOfAllTables(){
-   for (int i=0; i < totalTableNums.size(); i++){
-    if (totalTableNums.equals(1)){
-        tablesArray[0] ++ ;
-    }
-    else if (totalTableNums.equals(2)) {
-        tablesArray[1] ++ ;
-    }
-    else if (totalTableNums.equals(3)) {
-        tablesArray[2] ++ ;
-    }
-      else if (totalTableNums.equals(4)) {
-        tablesArray[3] ++ ;
-    }
-    else if (totalTableNums.equals(5)) {
-        tablesArray[4] ++ ;
+ for (int i = 0 ; i < totalTableNums.size(); i++){
+     if (totalTableNums.get(i).equals(1)){
+         sum1 ++ ; 
+     }
+     else if (totalTableNums.get(i).equals(2)){
+         sum2 ++ ; 
+ }
+    else if (totalTableNums.get(i).equals(3)){
+         sum3 ++ ; 
+    
 }
-    else if (totalTableNums.equals(6)) {
-        tablesArray[5] ++ ;
-    }
-    else if (totalTableNums.equals(7)) {
-        tablesArray[6] ++ ;
-    }
-      else if (totalTableNums.equals(8)) {
-        tablesArray[7] ++ ;
-    }
-    else if (totalTableNums.equals(9)) {
-        tablesArray[8] ++ ;
-    }
-     else if (totalTableNums.equals(10)) {
-        tablesArray[9] ++ ;
-}
-            else{}}
-}
-void totaltablePercentage(){
-    for (int i=0; i < 10; i++) {
-      out.println("Table"+tablesArray[i]+":"+(tablesArray[i]*100)/sum + "%");
-  } 
+    else if (totalTableNums.get(i).equals(4)){
+         sum4 ++ ; 
+     }
+     else if (totalTableNums.get(i).equals(5)){
+         sum5 ++ ; 
+     }
+     else if (totalTableNums.get(i).equals(6)){
+         sum6 ++ ; 
+     }
+     else if (totalTableNums.get(i).equals(7)){
+         sum7 ++ ; 
+     }    
+     else if (totalTableNums.get(i).equals(8)){
+         sum8 ++ ; 
+     }
+     else if (totalTableNums.get(i).equals(9)){
+         sum9 ++ ; 
+     }
+     else if (totalTableNums.get(i).equals(10)){
+         sum10 ++ ; 
+     }
+     else{
+         
+     }
+  
+
+ }
+ }
+void totalTablePercentages(){
+    
+out.println("Table 1:"+(sum1*100)/totalTableNums.size() + "%" );
+out.println("Table 2:"+(sum2*100)/totalTableNums.size() + "%" );
+out.println("Table 3:"+(sum3*100)/totalTableNums.size() + "%" );
+out.println("Table 4:"+(sum4*100)/totalTableNums.size() + "%" );
+out.println("Table 5:"+(sum5*100)/totalTableNums.size() + "%" );
+out.println("Table 6:"+(sum6*100)/totalTableNums.size() + "%" );
+out.println("Table 7:"+(sum7*100)/totalTableNums.size() + "%" );
+out.println("Table 8:"+(sum8*100)/totalTableNums.size() + "%" );
+out.println("Table 9:"+(sum9*100)/totalTableNums.size() + "%" );
+out.println("Table 10:"+(sum10*100)/totalTableNums.size() + "%" );
+               
 }
 }
