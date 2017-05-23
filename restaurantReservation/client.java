@@ -83,16 +83,16 @@ public void sumOfTables(){                 //sums reserved tables and sorts how 
 }
   public void tablePercentages(){                     // percentahges on table popularity for the night
      
-out.println("Table 1:"+(sum1*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum2*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum3*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum4*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum5*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum6*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum7*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum8*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum9*100)/tables.size() + "%" );
-out.println("Table 1:"+(sum10*100)/tables.size() + "%" );
+out.println("Table 1:"+(sum1*100)/tableNums.size() + "%" );
+out.println("Table 2:"+(sum2*100)/tableNums.size() + "%" );
+out.println("Table 3:"+(sum3*100)/tableNums.size() + "%" );
+out.println("Table 4:"+(sum4*100)/tableNums.size() + "%" );
+out.println("Table 5:"+(sum5*100)/tableNums.size() + "%" );
+out.println("Table 6:"+(sum6*100)/tableNums.size() + "%" );
+out.println("Table 7:"+(sum7*100)/tableNums.size() + "%" );
+out.println("Table 8:"+(sum8*100)/tableNums.size() + "%" );
+out.println("Table 9:"+(sum9*100)/tableNums.size() + "%" );
+out.println("Table 10:"+(sum10*100)/tableNums.size() + "%" );
                
   }
 
