@@ -95,5 +95,13 @@ out.println("Table 9:"+(sum9*100)/tableNums.size() + "%" );
 out.println("Table 10:"+(sum10*100)/tableNums.size() + "%" );
                
   }
+ 
+ void clear(){               // clears all ArrayLists
+    names.clear();
+    times.clear();
+    tables.clear();
+    tableNums.clear();
+    persons.clear();
+}
 
 }
