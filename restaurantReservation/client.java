@@ -25,28 +25,29 @@ ArrayList<Integer> persons = new ArrayList();
     out.println(fixedData[3]+persons);
 }
 
-public void displayNames(){                 //display names of clients that resereved today
+public String displayNames(){                 //display names of clients that resereved today
     for (int i= 0 ; i < names.size(); i++){
-    out.println(fixedData[0]+ names.get(i));
+    return (fixedData[0]+ names.get(i));
     }
+     return null;
 }
 
-public void sumClients(){               //sums the clients for that evening 
+public int sumClients(){               //sums the clients for that evening 
     int sum  = 0 ; 
     for (int i=0 ; i < persons.size(); i++){
     sum = sum + persons.get(i);
 }
-  out.println("Total Clients:"+sum);
- // persons.clear();                     // clears Arraylist, should remain there?
+    return sum ; 
+  
+                     
 }
 
-int[] tablesArray = { 1,2,3,4,5,6,7,8,9,10}; 
-int sum = tableNums.size();
+
 int sum1= 0 , sum2= 0  , sum3 = 0 ,  sum4=0 , sum5=0 , sum6=0 , sum7=0 , sum8=0 , sum9=0,  sum10=0;
 
 public void sumOfTables(){                 //sums reserved tables and sorts how many times a table was reserved that night
     for (int i = 0; i< tableNums.size() ; i++){
-     if (tableNums.get(i).equals(1)){
+  if (tableNums.get(i).equals(1)){
          sum1 ++ ; 
      }  
      else if (tableNums.get(i).equals(2)){
@@ -78,30 +79,36 @@ public void sumOfTables(){                 //sums reserved tables and sorts how 
      }
       else {
           
-      }
+      }    
 }
 }
-  public void tablePercentages(){                     // percentahges on table popularity for the night
-     
-out.println("Table 1:"+(sum1*100)/tableNums.size() + "%" );
-out.println("Table 2:"+(sum2*100)/tableNums.size() + "%" );
-out.println("Table 3:"+(sum3*100)/tableNums.size() + "%" );
-out.println("Table 4:"+(sum4*100)/tableNums.size() + "%" );
-out.println("Table 5:"+(sum5*100)/tableNums.size() + "%" );
-out.println("Table 6:"+(sum6*100)/tableNums.size() + "%" );
-out.println("Table 7:"+(sum7*100)/tableNums.size() + "%" );
-out.println("Table 8:"+(sum8*100)/tableNums.size() + "%" );
-out.println("Table 9:"+(sum9*100)/tableNums.size() + "%" );
-out.println("Table 10:"+(sum10*100)/tableNums.size() + "%" );
+  public String tablePercentages(){                     // percentahges on table popularity for the night
+
+return ("Table 1:"+(sum1*100)/tableNums.size() + "%"  
+  + System.lineSeparator() +"Table 2:"+(sum2*100)/tableNums.size() + "%" 
+  + System.lineSeparator() +"Table 3:"+(sum3*100)/tableNums.size() + "%" 
+  + System.lineSeparator() +"Table 4:"+(sum4*100)/tableNums.size() + "%" 
+  + System.lineSeparator() + "Table 5:"+(sum5*100)/tableNums.size() + "%" 
+  + System.lineSeparator() +"Table 6:"+(sum6*100)/tableNums.size() + "%" 
+  + System.lineSeparator() +"Table 7:"+(sum7*100)/tableNums.size() + "%" 
+  + System.lineSeparator() +"Table 8:"+(sum8*100)/tableNums.size() + "%" 
+  + System.lineSeparator() +"Table 9:"+(sum9*100)/tableNums.size() + "%" 
+  + System.lineSeparator() +"Table 10:"+(sum10*100)/tableNums.size() + "%" );
                
+
   }
- 
- void clear(){               // clears all ArrayLists
+  
+  void displayPercentages(){
+      out.println("Table 1:"+(sum1*100)/tableNums.size() + "%");
+       out.println("Table 2:"+(sum2*100)/tableNums.size() + "%");
+        out.println("Table 3:"+(sum1*100)/tableNums.size() + "%");
+  }
+  
+void clear(){               // clears all ArrayLists
     names.clear();
     times.clear();
     tables.clear();
     tableNums.clear();
     persons.clear();
 }
-
 }
