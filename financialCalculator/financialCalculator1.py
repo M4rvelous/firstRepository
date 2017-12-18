@@ -20,25 +20,21 @@ while (checkVariable == "Y"):
         r = int (input("Enter required rate of return"))
         mv = int (input("Enter Market Value of outstanding securities"))
         print("The WACC is",(s*r*mv/s*mv))
+    
         
-    elif (a == "C"): #CAPM calculcation
-        rf = int(input("Enter risk free rate"))
-        beta  = int(input("Enter beta of the security"))
-        rm = int (input("Enter expected return of the market"))
-        print("The expected return of the asset is ", (rf+beta)*(rm-rf))
-        
-    elif (a == "SML"): #SML Calculation
+    elif (a == "C"): #CAP<M Calculation
         em = int (input("Enter expexted return of market portfolio"))
         b = int(input("Enter Beta"))
         rm = int(input("Enter market rate of return"))
         rf = int(input("Enter Risk Free Rate"))
-        print ("The SML is ", rf + (b*(rm-rf)) )
+        print ("The CAPM is ", rf + (b*(rm-rf)) )
          
     elif (a == "I"): #IRR calculation
         p = input("Enter number of periods of capital inflows")
         
         
     elif (a == "B"): #Beta coeffiecient calculation
+    #beta needs historical prices for both the asset and the benchmark in order to be calculated
         print
         
     elif (a == "A"): #Alpha calculation
@@ -59,7 +55,10 @@ while (checkVariable == "Y"):
             x=x+1
 
     elif (a == "S"): #Sharpe ratio calculation
-        print
+    stdev = input("Enter assets variance")
+    expret = input("Enter assets expected return")
+    rf = input ("Enter risk free rate")
+        print ("Sharpe ratio is", (expret)/var)
         
     elif (a == "T"): #Test
         print("Test")
@@ -69,3 +68,4 @@ while (checkVariable == "Y"):
         print("Invalid Entry")
                
     checkVariable = input("Would you like to continue?")
+
