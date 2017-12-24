@@ -146,28 +146,27 @@ while (check == "y") or (check =="Y"):
     else:
         print ("Player Two wins")
     check = input("Want to play again?Y/N")    
-
-    #
+    
+#
 #Max of three
 #
+
+x = input("Enter first number")
+y = input("Enter second number")
+z = input("Enter third number")
 
 max = 0   
 def maxNum(x,y,z):
     
-    if (x > y):
-        if(x > z):
-            max = x 
-        else:
-            max = z
-    elif(y > z):
-        max = y
-    else:
+    if (x > y) and (x > z):
+        max = x
+        
+    elif (y > x) and (y > z):
+       max = y
+    
+    elif(z > x) and (z > y):
         max = z
-
+        
     return max
 
-print (maxNum(10,15,20)) 
-
-
-            
-            
+print (maxNum(x,y,z))
