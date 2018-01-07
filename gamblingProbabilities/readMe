@@ -1,0 +1,3 @@
+This file contains small Python programs that simulate popular games. It is a measure to demostrate
+the probabilies that are associated with each game. That being said it should be taken into consideration that
+a pseudorandom function has been used for all programs. 
